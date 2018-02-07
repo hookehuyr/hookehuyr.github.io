@@ -21,6 +21,7 @@ tags:
 ## call
 ### 基本使用
 call 的执行过程: 首先找到 Function.prototype 上的 call 方法, 执行 call 方法, 执行中把 fn 中的 this 换成 obj, 最后 fn 执行.
+
 ```javascript
 var obj = {
   name: 'xxx'
@@ -35,12 +36,12 @@ fn.call(obj)
 ```javascript
 function f1 () { console.log(1) }
 function f2 () { console.log(2) }
-  
+
 // 输出1
 f1.call(f2) // 1
-  
+
 // 输出2
-f1.call.call(f2) // 2 
+f1.call.call(f2) // 2
 ```
 ### call、apply、bind的区别
 ES5中使用严格模式, `use strict`
@@ -59,7 +60,7 @@ function fn(num1, num2) {
   console.log(this);
 }
 fn.call(obj , 100 , 200);
-fn.apply(obj , [100, 200]); 
+fn.apply(obj , [100, 200]);
 ```
 `bind`的区别在于它会把 this 改变为我们想要的结果但是不会立即执行
 ```javascript
@@ -70,7 +71,7 @@ temp()
 #### 求数组的最大值和最小值
 ```javascript
 var ary = [23, 34, 24, 12, 35, 36, 14, 25];
-var max = Math.max.apply(null, ary); 
+var max = Math.max.apply(null, ary);
 var min = Math.min.apply(null, ary);
 console.log(min, max);
 ```
@@ -80,10 +81,10 @@ function avgFn() {
     Array.prototype.sort.call(arguments , function (a, b) {
         return a - b;
     });
-    
+
     [].shift.call(arguments);
     [].pop.call(arguments);
-    
+
     return (eval([].join.call(arguments, '+')) / arguments.length).toFixed(2);
 }
 var res = avgFn(9.8, 9.7, 10, 9.9, 9.0, 9.8, 3.0);
@@ -106,4 +107,3 @@ function likeToArray (likeArr) {
   return arr
 }
 ```
-
