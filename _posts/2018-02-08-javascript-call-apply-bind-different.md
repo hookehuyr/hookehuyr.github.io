@@ -20,6 +20,7 @@ tags:
 
 ## call
 ### 基本使用
+
 call 的执行过程: 首先找到 Function.prototype 上的 call 方法, 执行 call 方法, 执行中把 fn 中的 this 换成 obj, 最后 fn 执行.
 
 ```javascript
