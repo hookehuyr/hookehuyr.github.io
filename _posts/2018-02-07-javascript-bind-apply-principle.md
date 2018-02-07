@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      "JavaScript 中 bind 的使用与实现"
+subtitle:   ""
+date:       2018-02-05 12:00:00
+author:     "Hooke"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 技术
+---
+
 # JavaScript 中 bind 的使用与实现 `ES5`
 ```javascript
 var altwrite = document.write;
