@@ -108,3 +108,6 @@ function likeToArray (likeArr) {
   return arr
 }
 ```
+
+### 总结
+当你需要改变上下文环境时又不需要立即执行时用 `bind` 它返回的是对应函数, `call` 和 `apply` 会改变上下文后立即执行函数.
