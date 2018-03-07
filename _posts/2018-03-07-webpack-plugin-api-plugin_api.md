@@ -7,7 +7,7 @@ author:     "Hooke"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - 技术
+    - 技术 webpack
 ---
 
 # Webpack 插件API - Plugin API
@@ -59,10 +59,3 @@ MyPlugin.prototype.apply = function(compiler) {
 
 module.exports = MyPlugin;
 ```
-
-## Tapable 和 Tapable 实例
-plugin 架构之所以在多数情况下适用于 webpack 是由于一个名为 Tapable 的内部库。 在 webpack 源代码中，`Tapable` 实例是一些由 Tapable 类继承或混入而来的类。
-
-对于 plugin 作者来说，知道 webpack 源码中哪些是 `Tapable` 实例是很重要的。这些实例提供了各种可以附加自定义插件的事件挂钩。 因此，贯穿本章的是，一个列出了 webpack 中所有 `Tapable` 实例（和它们的事件钩子）的列表，plugin 的作者可以使用它们。
-
-获取更多 Tapable 的信息，可以访问 [完整概述](https://doc.webpack-china.org/api/tapable) 或 [tapable 仓库](https://github.com/webpack/tapable)。
