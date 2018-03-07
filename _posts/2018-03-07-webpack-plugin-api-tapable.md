@@ -7,7 +7,8 @@ author:     "Hooke"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - 技术 webpack
+    - 技术
+    - webpack
 ---
 
 # Webpack 插件API - Tapable
